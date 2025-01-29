@@ -1,0 +1,207 @@
+// Variables globales
+$primary-color: #ff6060;
+$secondary-color: #F6F6F6;
+$white: white;
+
+// Tailles communes
+$border-radius-small: 5px;
+$border-radius-medium: 10px;
+$border-radius-large: 20px;
+$font-small: 12px;
+$font-medium: 16px;
+$font-large: 20px;
+$gap: 20px;
+$font-weight-medium: 500;
+$font-weight-light: 100;
+
+@mixin shadow-light { box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.details-container{
+    padding: 20px;
+    
+    .details-div{
+      @media all and (min-width:768px) {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        margin-bottom: 23px;
+    }
+
+    }
+    h3{
+      color: $primary-color;
+      font-size: $font-medium;
+      font-weight: $font-weight-light;
+      margin-top: 30px;
+      @media all and (min-width:768px) {
+        font-size: 26px;
+      }
+    }
+
+    .logement-p{
+      font-size: 10px;
+      margin-top: 8px;
+      font-weight: $font-weight-medium;
+      
+      @media all and (min-width:768px) {
+        font-size: $font-medium;
+        margin-bottom: 25px;
+        font-weight: $font-weight-light;
+      }
+    }
+
+    .list-tag{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      list-style: none;
+      gap: 10px;
+      padding-left: 0;
+
+      .tag {
+        font-size: 7px;
+        background-color: $primary-color;
+        min-width: 84px;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: $border-radius-small;
+        color: $white;
+        font-weight: $font-weight-medium;
+        @media all and (min-width:768px) {
+          padding: 8px;
+          font-size: $font-small;
+          border-radius: 12px;
+      }
+      }
+    }
+
+    .host-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      @media all and (min-width:768px) {
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: end;
+        gap: 10px,
+       
+    }
+
+      .rating{
+        display: flex;
+        gap: 4px;
+      }
+
+      .host-info{
+        display: flex;
+        align-items: center;
+        gap: $gap;
+
+        img{
+          height: 31px;
+          border-radius: 50%;
+          object-fit: cover;
+          @media all and (min-width:768px) {
+            height: 64px;
+           
+          }
+        }
+
+        .host-name{
+          width: 50px;
+          text-align: right;
+          color: $primary-color;
+          font-size: $font-small;
+          @media all and (min-width:768px) {
+            width: 70px;
+            font-size: $font-medium;
+           
+          }
+        }
+      }
+    }
+    
+}
+
+.text-description{
+  padding-left: 10px;
+  padding-top: 15px;
+  font-size: $font-small;
+}
+
+.list-equipement{
+  list-style: none;
+  padding-left: 10px;
+  font-size: $font-small;
+}
+
+
+.carousel{
+    position: relative;
+    height: 255px;
+    width: 100%;
+    border-radius: $border-radius-medium;
+    overflow: hidden;
+    @media all and (min-width:768px) {
+      height: 411px;
+     
+    }
+
+    .carousel-image{
+        height: 100%;
+        width: 100%;
+        img{
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+    }
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10;
+        font-size: 2rem;
+        color: $white;
+        border: none;
+        background-color: transparent;
+    
+        &.left {
+          left: 10px;
+        }
+    
+        &.right {
+          right: 10px;
+        }
+    }
+}
+
+.collapse-container{
+  @media all and (min-width:768px) {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    gap: 30px;
+  }
+
+  .collapse{
+    @media all and (min-width:768px) {
+      width: 50%;
+    }
+  }
+
+}
+.stars{
+  font-size: 15px;
+  @media all and (min-width:768px) {
+    font-size: 24px;;
+  }
+}

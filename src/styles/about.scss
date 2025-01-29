@@ -1,0 +1,37 @@
+.about-page{
+    padding: 0 20px;
+    img{
+        height: 111px;
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-bottom: 28px;
+        filter: brightness(70%);
+        @media all and (min-width:768px) {
+            height: 219px;
+            border-radius: 20px;
+          }
+    }
+
+    .collapse-div{
+        @media all and (min-width:768px) {
+            padding: 0 108px;
+        }
+    }
+
+    .collapse-about-btn{
+        @media all and (min-width:768px) {
+            font-size: 23px;
+            padding: 7px;
+        }
+        
+    }
+    .collapse-content{
+        font-size: 10px;
+        padding: 10px 10px 0;
+        @media all and (min-width:768px) {
+            font-size: 15px;
+        }
+    }
+     
+}
