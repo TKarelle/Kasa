@@ -16,9 +16,7 @@ function RatingStars({ rating }) {
           </span>
         ))}
 
-        {rating % 1 !== 0 && (
-          <span className="stars" style={{ color: "#ff6060"}}>★</span>
-        )}
+        
       </div>
     );
   }

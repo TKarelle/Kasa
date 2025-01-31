@@ -1,5 +1,4 @@
 // ./pages/AboutPage.jsx
-import React from 'react';
 import Collapse from '../components/Collapse';
 import imgAbout from '../assets/images/image2.png';
 import '../styles/main.scss'; 
